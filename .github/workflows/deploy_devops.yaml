@@ -97,3 +97,11 @@ jobs:
       - name: Push Docker image
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/devops:latest
+
+      - name: Notification to Slack
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.WEBHOOK_URL }}
+          SLACK_TITLE: Deploy Image Docker Hub
+          SLACK_MESSAGE: The image has been deployed to Docker Hub
+          SLACK_USERNAME: ${{ github.actor }}
