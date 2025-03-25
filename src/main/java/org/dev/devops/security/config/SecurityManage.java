@@ -16,6 +16,7 @@ import org.springframework.web.cors.reactive.CorsConfigurationSource;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Log4j2
 @Configuration
@@ -48,7 +49,7 @@ public class SecurityManage {
         CorsConfiguration configuration = new CorsConfiguration();
 
         // Especifica los orígenes permitidos.
-        configuration.setAllowedOriginPatterns(Arrays.asList("*"));
+        configuration.setAllowedOriginPatterns(List.of("*"));
 
         // Especifica los métodos HTTP permitidos.
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));

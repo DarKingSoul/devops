@@ -24,13 +24,6 @@ import java.util.Optional;
 @Slf4j
 public class GlobalExceptionHandler extends AbstractErrorWebExceptionHandler {
 
-    /**
-     * Constructor
-     * @param errorAttributes
-     * @param resources
-     * @param applicationContext
-     * @param codecConfigurer
-     */
     public GlobalExceptionHandler(ErrorAttributes errorAttributes, WebProperties.Resources resources, ApplicationContext applicationContext, ServerCodecConfigurer codecConfigurer) {
         super(errorAttributes, resources, applicationContext);
         this.setMessageReaders(codecConfigurer.getReaders());
