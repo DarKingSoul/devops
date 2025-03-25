@@ -34,7 +34,7 @@ public class GlobalExceptionHandler extends AbstractErrorWebExceptionHandler {
      * Metodo que maneja las rutas de error
      * @param errorAttributes the {@code ErrorAttributes} instance to use to extract error
      * information
-     * @return
+     * @return ServerResponse
      */
     @Override
     protected RouterFunction<ServerResponse> getRoutingFunction(ErrorAttributes errorAttributes) {

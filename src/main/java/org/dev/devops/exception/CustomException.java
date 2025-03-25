@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 @Getter
 public class CustomException extends Exception {
 
-    private HttpStatus status;
+    private final HttpStatus status;
 
     /**
      * Constructor de la clase
